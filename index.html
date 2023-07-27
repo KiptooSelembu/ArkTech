@@ -13,38 +13,54 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <!-- Navigation -->
-        <div class="navbar">
-            <!-- Logo -->
-            <a target="_blank" href="#"></a><i class="fas fa-ship fa-3x"></i>
-
-            <a href="#">Home</a>
-            <a href="#aboutus">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contactus">Contact us</a>
-            <button><i class="fa fa-search"></i></button>
-            <span style="font-size:30px;cursor:pointer;" onclick="open
-            ('#mySidebar')">&#9776;</span>
-        </div>
-    </header>
-    <section class="main">
-        <div class="hero">
-            <h2>Welcome to Arktech</h2>
-            <p>We are a leading provider of IT solutions and services.</p>
-            <form action="" method="post">
-                <input type="text" placeholder="Enter your email address..."><br />
-                <button type="submit">Subscribe Now</button>
-            </form>
-            <ul id="socialmediaicons">
-                <li><a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a target="_blank" href="#"><i class="fab fa-linkedin"></i></a></li>
-                <li><a target="_blank" href="#"><i class="fab fa-github"></i></a></li>
+        <div class="logo"><a href="#"><i class="fa fa-ship"></i></a></div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <form action>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
             </ul>
+        </nav>
+    </header>
+    <!--- Home Section --->
+    <section id="home">
+        <h2 style="color: #060606;">Welcome to ARKTECH!</h2><br />
+
+        <span
+            style="color:#000000; font-size: 3rem;"><strong>Your IT Partner
+                for the Future.</strong></span>
+        <p>&nbsp;</p>
+        <img src="./images/heroimage.jpg" alt width="70%" height="auto" />
+        <div class="socialmediaicons">
+            <a target="_blank" title="Facebook" href="#"><i aria-hidden="true" style="color: blue;" class="fab fa-facebook"></i></a>
+            &emsp;&emsp;<a target="_blank" title="Twitter" href="#"><i aria-hidden="true" style="color: rgb(91, 83, 248);"
+                    class="fab fa-twitter"></i></a>
+            &emsp;&emsp;<a target="_blank" title="Instagram" href="#"><i aria-hidden="true" style="color: pink;"
+                    class="fab fa-instagram"></i></a>
+            &emsp;&emsp;<a target="_blank" title="LinkedIn" href="#"><i aria-hidden="true" style="color:blue;"
+                    class="fab fa-linkedin"></i></a>
+            &emsp;&emsp;<a target="_blank" title="YouTube" href="#"><i aria-hidden="true" style="color: red;"
+                    class="fab fa-youtube"></i></a>
+        </div>
+        <div class="hero">
+            <video autoplay muted loop playsinline controls poster="">
+                <source src="" type="video/mp4">
+            </video>
+            <iframe frameborder="1px solid black" scrolling="no" marginheight= "0px
+                marginwidth = "0px" allowfullscreen
+                webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen
+                allow="autoplay *; fullscreen *; encrypted-media *"
+                sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-
+                presentation">
+                </iframe>
         </div>
     </section>
 </body>
-
 </html>
