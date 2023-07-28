@@ -36,5 +36,49 @@ function addExerciseToHistory(exercise, duration) {
 
   row.appendChild(exerciseCell);
   row.appendChild(durationCell);
+
+  // Create a new cell for the action buttons
+  const actionsCell = document.createElement("td");
+  const editButton = document.createElement("button");
+  const deleteButton = document.createElement("button");
+
+  editButton.textContent = "Edit";
+  deleteButton.textContent = "Delete";
+
+  editButton.classList.add("edit-btn");
+  deleteButton.classList.add("delete-btn");
+
+  editButton.addEventListener("click", () => {
+    // Implement edit functionality here if needed
+    Swal.fire({
+      icon: "info",
+      title: "Edit",
+      text: `You clicked Edit for ${exercise} (${duration} minutes).`,
+    });
+  });
+
+  deleteButton.addEventListener("click", () => {
+    // Implement delete functionality here if needed
+    Swal.fire({
+      icon: "warning",
+      title: "Delete",
+      text: `Are you sure you want to delete ${exercise} (${duration} minutes)?`,
+      showCancelButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        row.remove();
+        Swal.fire({
+          icon: "success",
+          title: "Deleted!",
+          text: `${exercise} (${duration} minutes) has been deleted.`,
+        });
+      }
+    });
+  });
+
+  actionsCell.appendChild(editButton);
+  actionsCell.appendChild(deleteButton);
+
+  row.appendChild(actionsCell);
   historyBody.appendChild(row);
 }
