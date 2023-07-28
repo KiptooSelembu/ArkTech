@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script defer src="https://use.fontawesome.com/releases/v5.0 /js/all.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>ArkTech</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo"><a href="#"><i class="fa fa-ship"></i></a></div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact us</a></li>
-                <form action>
-                    <input type="text" placeholder="Search...">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </ul>
-        </nav>
-    </header>
-    <!--- Home Section --->
-    <section id="home">
-        <h2 style="color: #060606;">Welcome to ARKTECH!</h2><br />
+  <div id="header">
+    <img src="https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Exercise App Icon">
+    <h1>Exercise App</h1>
+  </div>
 
-        <span
-            style="color:#000000; font-size: 3rem;"><strong>Your IT Partner
-                for the Future.</strong></span>
-        <p>&nbsp;</p>
-        <img src="./images/heroimage.jpg" alt width="70%" height="auto" />
-        <div class="socialmediaicons">
-            <a target="_blank" title="Facebook" href="#"><i aria-hidden="true" style="color: blue;" class="fab fa-facebook"></i></a>
-            &emsp;&emsp;<a target="_blank" title="Twitter" href="#"><i aria-hidden="true" style="color: rgb(91, 83, 248);"
-                    class="fab fa-twitter"></i></a>
-            &emsp;&emsp;<a target="_blank" title="Instagram" href="#"><i aria-hidden="true" style="color: pink;"
-                    class="fab fa-instagram"></i></a>
-            &emsp;&emsp;<a target="_blank" title="LinkedIn" href="#"><i aria-hidden="true" style="color:blue;"
-                    class="fab fa-linkedin"></i></a>
-            &emsp;&emsp;<a target="_blank" title="YouTube" href="#"><i aria-hidden="true" style="color: red;"
-                    class="fab fa-youtube"></i></a>
-        </div>
-        <div class="hero">
-            <video autoplay muted loop playsinline controls poster="">
-                <source src="" type="video/mp4">
-            </video>
-            <iframe frameborder="1px solid black" scrolling="no" marginheight= "0px
-                marginwidth = "0px" allowfullscreen
-                webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen
-                allow="autoplay *; fullscreen *; encrypted-media *"
-                sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-
-                presentation">
-                </iframe>
-        </div>
-    </section>
+  <div id="description">
+    <p>Welcome to the Exercise App! Track your exercise activities by filling out the form below.</p>
+  </div>
+
+  <form id="exerciseForm">
+    <label for="exercise">Exercise:</label>
+    <select id="exercise" required>
+      <option value="">Select an exercise</option>
+      <option value="pushups">Push-ups</option>
+      <option value="squats">Squats</option>
+      <option value="plank">Plank</option>
+      <!-- Add more exercise options as needed -->
+    </select>
+
+    <label for="duration">Duration (in minutes):</label>
+    <input type="text" id="duration" required>
+
+    <button type="submit">Add Exercise</button>
+  </form>
+  
+
+  <h2>Exercise History</h2>
+  <table id="historyTable">
+    <thead>
+      <tr>
+        <th>Exercise</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody id="historyBody">
+      <!-- Exercise entries will be added here -->
+    </tbody>
+  </table>
+
+  <div id="footer">
+    <p>Contact us: email@example.com | Phone: (123) 456-7890</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
